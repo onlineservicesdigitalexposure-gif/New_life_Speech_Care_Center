@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #52B788;
+  --color-primary-light: #74C69D;
+  --color-primary-dark: #40916C;
+  --color-primary-50: #E8F7ED;
+  --color-secondary: #D8F3DC;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+
+  --animate-fade-in: fade-in 0.5s ease-in-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+:root {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #1F2937;
+  /* Gray 800 */
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Custom Utilities */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Section Spacing */
+.section-padding {
+  @apply py-16 lg:py-24;
+}
+
+/* Premium Typography */
+.heading-xl {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight;
+}
+
+.heading-lg {
+  @apply text-3xl md:text-4xl font-bold text-gray-900 tracking-tight;
+}
+
+.heading-md {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.body-text {
+  @apply text-lg text-gray-600 leading-relaxed;
+}
+
+/* Premium Buttons */
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-dark transition-all duration-300 px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+}
+
+.btn-secondary {
+  @apply bg-white text-primary border-2 border-primary hover:bg-primary-50 transition-all duration-300 px-6 py-3 rounded-full font-medium hover:shadow-md hover:-translate-y-0.5 active:translate-y-0;
+}
+
+.btn-ghost {
+  @apply bg-transparent text-gray-600 hover:text-primary hover:bg-primary-50 transition-colors px-4 py-2 rounded-lg font-medium;
+}
+
+/* Card Styling */
+.card-premium {
+  @apply bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300;
+}
