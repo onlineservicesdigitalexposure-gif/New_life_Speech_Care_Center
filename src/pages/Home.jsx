@@ -331,18 +331,28 @@ export default function Home() {
                         <div className="relative z-10 max-w-2xl mx-auto bg-white rounded-3xl shadow-xl shadow-gray-200/50 p-10 md:p-12 border border-white transition-colors duration-300 group-hover:border-transparent">
                             <h2 className="heading-lg text-center mb-10">{t('home.aptTitle')}</h2>
 
-                            <form className="space-y-6">
+                            <form className="space-y-6" onSubmit={(e) => {
+                                e.preventDefault();
+                                const name = e.target.elements.name.value;
+                                const phone = e.target.elements.phone.value;
+                                const concern = e.target.elements.concern.value;
+                                
+                                const message = `*New Appointment Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Concern:* ${concern}`;
+                                const whatsappUrl = `https://wa.me/918777877372?text=${encodeURIComponent(message)}`;
+                                
+                                window.open(whatsappUrl, '_blank');
+                            }}>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">{t('home.aptName')}</label>
-                                    <input type="text" className="w-full px-5 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" />
+                                    <input required name="name" type="text" className="w-full px-5 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">{t('home.aptPhone')}</label>
-                                    <input type="tel" className="w-full px-5 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" />
+                                    <input required name="phone" type="tel" className="w-full px-5 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">{t('home.aptConcern')}</label>
-                                    <textarea rows="3" className="w-full px-5 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"></textarea>
+                                    <textarea name="concern" rows="3" className="w-full px-5 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"></textarea>
                                 </div>
                                 <Button size="lg" className="w-full text-lg py-4 mt-6 rounded-full">
                                     {t('home.aptSubmit')}
