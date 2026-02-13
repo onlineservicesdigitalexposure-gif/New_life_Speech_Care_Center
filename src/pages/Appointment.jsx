@@ -32,6 +32,11 @@ export default function Appointment() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const message = `*New Appointment Request*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Service:* ${formData.service}\n*Date:* ${formData.date}\n*Message:* ${formData.message}`;
+        const whatsappUrl = `https://wa.me/918777877372?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappUrl, '_blank');
         setSubmitted(true);
     };
 
