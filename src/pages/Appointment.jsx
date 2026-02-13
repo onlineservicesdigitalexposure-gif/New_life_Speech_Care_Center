@@ -45,11 +45,11 @@ export default function Appointment() {
             {/* Header */}
             <section className="bg-white py-12 shadow-sm">
                 <div className="container-custom text-center">
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{t('appointment.title')}</h1>
-                    <p className="text-gray-600 max-w-2xl mx-auto mb-4">{t('appointment.subtitle')}</p>
+                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{t('Appointment Title')}</h1>
+                    <p className="text-gray-600 max-w-2xl mx-auto mb-4">{t('Appointment Subtitle')}</p>
                     <div className="inline-flex items-center gap-2 bg-secondary text-primary px-4 py-2 rounded-full text-sm font-medium">
                         <CheckCircle size={16} />
-                        {t('appointment.reassurance')}
+                        {t('Appointment Reassurance')}
                     </div>
                 </div>
             </section>
@@ -68,18 +68,18 @@ export default function Appointment() {
                                             <CheckCircle size={48} />
                                         </div>
                                         <h3 className="text-2xl font-bold text-gray-900 mb-2">Request Sent!</h3>
-                                        <p className="text-gray-600">{t('appointment.form.success')}</p>
+                                        <p className="text-gray-600">{t('Appointment Form Success')}</p>
                                         <Button onClick={() => setSubmitted(false)} variant="outline" className="mt-8">
                                             Book Another
                                         </Button>
                                     </div>
                                 ) : (
                                     <>
-                                        <h2 className="text-2xl font-bold mb-6 text-gray-800">{t('appointment.formTitle')}</h2>
+                                        <h2 className="text-2xl font-bold mb-6 text-gray-800">{t('Appointment Form')}</h2>
                                         <form onSubmit={handleSubmit} className="space-y-6">
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                 <div>
-                                                    <label className="block text-sm font-semibold text-gray-700 mb-2">{t('appointment.name')}</label>
+                                                    <label className="block text-sm font-semibold text-gray-700 mb-2">{t('Name')}</label>
                                                     <div className="relative">
                                                         <User className="absolute left-4 top-3.5 text-gray-400" size={20} />
                                                         <input
@@ -94,7 +94,7 @@ export default function Appointment() {
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <label className="block text-sm font-semibold text-gray-700 mb-2">{t('appointment.phone')}</label>
+                                                    <label className="block text-sm font-semibold text-gray-700 mb-2">{t('Phone')}</label>
                                                     <div className="relative">
                                                         <Phone className="absolute left-4 top-3.5 text-gray-400" size={20} />
                                                         <input
@@ -111,7 +111,7 @@ export default function Appointment() {
                                             </div>
 
                                             <div>
-                                                <label className="block text-sm font-semibold text-gray-700 mb-2">{t('appointment.email')}</label>
+                                                <label className="block text-sm font-semibold text-gray-700 mb-2">{t('Email')}</label>
                                                 <div className="relative">
                                                     <Mail className="absolute left-4 top-3.5 text-gray-400" size={20} />
                                                     <input
@@ -126,7 +126,7 @@ export default function Appointment() {
                                             </div>
 
                                             <div>
-                                                <label className="block text-sm font-semibold text-gray-700 mb-2">{t('appointment.serviceType')}</label>
+                                                <label className="block text-sm font-semibold text-gray-700 mb-2">{t('Service Type')}</label>
                                                 <div className="relative">
                                                     <ClipboardList className="absolute left-4 top-3.5 text-gray-400" size={20} />
                                                     <select
@@ -135,16 +135,16 @@ export default function Appointment() {
                                                         onChange={handleChange}
                                                         className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none appearance-none"
                                                     >
-                                                        <option value="consultation">{t('appointment.serviceOptions.consultation')}</option>
-                                                        <option value="assessment">{t('appointment.serviceOptions.assessment')}</option>
-                                                        <option value="therapy">{t('appointment.serviceOptions.therapy')}</option>
-                                                        <option value="online">{t('appointment.serviceOptions.online')}</option>
+                                                        <option value="consultation">{t('appointment for consultation')}</option>
+                                                        <option value="assessment">{t('appointment for assessment')}</option>
+                                                        <option value="therapy">{t('appointment for therapy')}</option>
+                                                        <option value="online">{t('appointment for online')}</option>
                                                     </select>
                                                 </div>
                                             </div>
 
                                             <div>
-                                                <label className="block text-sm font-semibold text-gray-700 mb-2">{t('appointment.date')}</label>
+                                                <label className="block text-sm font-semibold text-gray-700 mb-2">{t('Appointment Date')}</label>
                                                 <div className="relative">
                                                     <Calendar className="absolute left-4 top-3.5 text-gray-400" size={20} />
                                                     <input
@@ -159,7 +159,7 @@ export default function Appointment() {
                                             </div>
 
                                             <div>
-                                                <label className="block text-sm font-semibold text-gray-700 mb-2">{t('appointment.message')}</label>
+                                                <label className="block text-sm font-semibold text-gray-700 mb-2">{t('Appointment Message')}</label>
                                                 <div className="relative">
                                                     <MessageSquare className="absolute left-4 top-3.5 text-gray-400" size={20} />
                                                     <textarea
@@ -168,13 +168,13 @@ export default function Appointment() {
                                                         onChange={handleChange}
                                                         rows="4"
                                                         className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
-                                                        placeholder={t('appointment.messagePlaceholder')}
+                                                        placeholder={t('appointment message')}
                                                     ></textarea>
                                                 </div>
                                             </div>
 
                                             <Button size="lg" className="w-full py-4 text-lg rounded-xl shadow-lg shadow-primary/20 hover:shadow-xl transition-shadow">
-                                                {t('appointment.submit')}
+                                                {t('Submit Appointment')}
                                             </Button>
                                         </form>
                                     </>
@@ -192,8 +192,8 @@ export default function Appointment() {
                                 <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center text-primary mx-auto mb-4">
                                     <Phone size={32} />
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">{t('appointment.callUs')}</h3>
-                                <p className="text-gray-600 mb-4">{t('appointment.callDesc')}</p>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">{t('Call Us')}</h3>
+                                <p className="text-gray-600 mb-4">{t('Call Description')}</p>
                                 <a href={`tel:${displayPhone.replace(/\s/g, '')}`} className="inline-block px-6 py-2 bg-primary text-white rounded-full font-semibold hover:bg-primary-600 transition-colors">
                                     {displayPhone}
                                 </a>
@@ -207,8 +207,8 @@ export default function Appointment() {
                                 <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-green-600 mx-auto mb-4">
                                     <MessageCircle size={32} />
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">WhatsApp</h3>
-                                <p className="text-gray-600 mb-4">{t('appointment.whatsappDesc')}</p>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">{t('WhatsApp')}</h3>
+                                <p className="text-gray-600 mb-4">{t('WhatsApp Description')}</p>
                                 <a href={`https://wa.me/${contactNumber.replace('+', '')}`} target="_blank" rel="noreferrer" className="inline-block px-6 py-2 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-colors">
                                     Chat on WhatsApp
                                 </a>
