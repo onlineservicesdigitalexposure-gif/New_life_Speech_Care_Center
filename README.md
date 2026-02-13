@@ -1,4 +1,4 @@
-# Speech Therapy Website - SpeechCareCenter
+# Speech Therapy Website - New Life Care Center
 ### স্পিচ থেরাপি ওয়েবসাইট - স্পিচকেয়ারসেন্টার
 
 A modern, responsive React-based website for **SpeechCareCenter**, designed to provide information about speech therapy services and facilitate appointment booking. This project leverages the power of **React**, **Vite**, and **Tailwind CSS** to deliver a fast and seamless user experience.
